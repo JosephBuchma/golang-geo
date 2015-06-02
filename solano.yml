@@ -1,0 +1,29 @@
+# Solano CI configuration for golang-geo
+
+golang:
+  golang_version: 1.2.1
+
+hooks:
+  pre_setup: ./solano-pre_setup.sh
+
+environment:
+  'GO_ENV': 'test'
+
+mysql:
+  version: '5.5'
+
+postgresql:
+  version: '9.3'
+
+cache:
+  key_paths:
+    - solano-pre_setup.sh
+  save_paths:
+    - bin
+    - pkg
+    - src
+
+tests:
+  - export DB=mysql && export GOPATH=$TDDIUM_REPO_ROOT && go test
+  - export DB=postgres-solano && export GOPATH=$TDDIUM_REPO_ROOT && go test # Using 'postgres-solano' because 'postgres' has db user name hardcoded
+  - export DB=mock && export GOPATH=$TDDIUM_REPO_ROOT && go test

@@ -3,3 +3,4 @@ config
 config/*
 config/**/*
 *.html
+.solano*

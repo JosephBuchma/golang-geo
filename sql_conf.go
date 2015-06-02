@@ -32,6 +32,8 @@ func sqlConfFromEnv() *SQLConf {
 		return &SQLConf{driver: "mymysql", openStr: DEFAULT_MYSQL_OPEN_STR, table: "points", latCol: "lat", lngCol: "lng"}
 	case "mock":
 		return &SQLConf{driver: "testdb", openStr: DEFAULT_TEST_OPEN_STR, table: "points", latCol: "lat", lngCol: "lng"}
+	case "postgres-solano":
+		return &SQLConf{driver: "postgres", openStr: "user=" + os.Getenv("TDDIUM_DB_PG_USER") + " dbname=points sslmode=disable", table: "points", latCol: "lat", lngCol: "lng"}
 	default:
 		return &SQLConf{driver: "postgres", openStr: DEFAULT_PGSQL_OPEN_STR, table: "points", latCol: "lat", lngCol: "lng"}
 	}
