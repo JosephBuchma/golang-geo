@@ -11,7 +11,7 @@
 
 ♫ around the world ♪
 ```
-[![Build Status](https://drone.io/github.com/kellydunn/golang-geo/status.png)](https://drone.io/github.com/kellydunn/golang-geo/latest)
+![Solano CI Build Status](https://ci.solanolabs.com/solanolabs/golang-geo/badges/branches/master?badge_token=0da8598f2165d788bf1b10639c10cbaf2177a349)
 [![Coverage Status](https://coveralls.io/repos/kellydunn/golang-geo/badge.png?branch=develop)](https://coveralls.io/r/kellydunn/golang-geo?branch=develop)
 [![GoDoc](https://godoc.org/github.com/kellydunn/golang-geo?status.svg)](http://godoc.org/github.com/kellydunn/golang-geo)
 [![Join the chat at https://gitter.im/kellydunn/golang-geo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kellydunn/golang-geo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
