@@ -1,7 +1,7 @@
 # Solano CI configuration for golang-geo
 
 golang:
-  golang_version: 1.2.1
+  golang_version: 1.5.3
 
 hooks:
   pre_setup: ./solano-pre_setup.sh
