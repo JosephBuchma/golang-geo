@@ -16,6 +16,10 @@
 [![GoDoc](https://godoc.org/github.com/kellydunn/golang-geo?status.svg)](http://godoc.org/github.com/kellydunn/golang-geo)
 [![Join the chat at https://gitter.im/kellydunn/golang-geo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kellydunn/golang-geo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## Note
+
+Dependencies require go 1.4+
+
 ## what 
 
 This library provides convenience functions for translating, geocoding, and calculating distances between geographical points.  It is inspired by ruby's `geokit` and `geokit-rails` gems, and aims to make working with geographical data a little bit easier in golang.
