@@ -1,5 +1,4 @@
 # Solano CI configuration for golang-geo
-
 golang:
   golang_version: 1.5.3
 
