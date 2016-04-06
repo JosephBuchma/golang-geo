@@ -18,7 +18,7 @@
 
 ## Note
 
-Dependencies require go 1.4+
+Dependencies require go 1.4+ 
 
 ## what 
 
