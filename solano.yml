@@ -21,30 +21,30 @@ cache:
     - bin
     - pkg
     - src
-
+plan:
+  - default
+  - step1
+  - step2
+  - step3
+  
 profiles:
   default:
     tests:
       - export DB=mysql && export GOPATH=$TDDIUM_REPO_ROOT && go test
       - export DB=postgres-solano && export GOPATH=$TDDIUM_REPO_ROOT && go test # Using 'postgres-solano' because 'postgres' has db user name hardcoded
       - export DB=mock && export GOPATH=$TDDIUM_REPO_ROOT && go test
+      - echo 'step1'
 
-  bundle_test:
+  step2:
     tests:
       - export DB=mysql && export GOPATH=$TDDIUM_REPO_ROOT && go test
       - export DB=postgres-solano && export GOPATH=$TDDIUM_REPO_ROOT && go test # Using 'postgres-solano' because 'postgres' has db
       - export DB=mock && export GOPATH=$TDDIUM_REPO_ROOT && go test
-      - test `grep -c '[c]rack tar' ~/setup.log` -gt 0
-  no_bundle_test:
+      - echo 'step2'
+      
+  step3:
     tests:
       - export DB=mysql && export GOPATH=$TDDIUM_REPO_ROOT && go test
       - export DB=postgres-solano && export GOPATH=$TDDIUM_REPO_ROOT && go test # Using 'postgres-solano' because 'postgres' has db
       - export DB=mock && export GOPATH=$TDDIUM_REPO_ROOT && go test
-      - test `grep -c '[c]rack tar' ~/setup.log` -eq 0
-
-  snapshot_test:
-    tests:
-      - export DB=mysql && export GOPATH=$TDDIUM_REPO_ROOT && go test
-      - export DB=postgres-solano && export GOPATH=$TDDIUM_REPO_ROOT && go test # Using 'postgres-solano' because 'postgres' has db
-      - export DB=mock && export GOPATH=$TDDIUM_REPO_ROOT && go test
-      - test `grep -c '[u]npacked and verified snapshot' ~/setup.log` -gt 0
+      - echo 'step3'
