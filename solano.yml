@@ -1,4 +1,8 @@
 # Solano CI configuration for golang-geo
+#
+
+system:
+  session_manager: 'destro_free'
 
 golang:
   golang_version: 1.5.3
